@@ -8,8 +8,8 @@ services:
       - redis
     environment:
       APP_URL: 'https://scada-documentation-15cf1cbd0480.herokuapp.com/'
-      APP_SECRET: '3793c2e84188b3d16ab99d1a1b3d0c47efff659c40fa3d1e5b6e6152ca79b159'
-      DATABASE_URL: 'postgresql://docmost:STRONG_DB_PASSWORD@db:5432/docmost?schema=public'
+      APP_SECRET: 3793c2e84188b3d16ab99d1a1b3d0c47efff659c40fa3d1e5b6e6152ca79b159
+      DATABASE_URL: 'postgresql://docmost:password@db:5432/docmost?schema=public'
       REDIS_URL: 'redis://redis:6379'
     ports:
       - "3000:3000"
@@ -22,7 +22,7 @@ services:
     environment:
       POSTGRES_DB: docmost
       POSTGRES_USER: docmost
-      POSTGRES_PASSWORD: uJnTM3(5TW$5H<XF
+      POSTGRES_PASSWORD: password
     restart: unless-stopped
     volumes:
       - db_data:/var/lib/postgresql/data
